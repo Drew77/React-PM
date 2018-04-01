@@ -17,7 +17,7 @@ class Project extends Component {
         
     <div className="project-container">
         <div className="project-title">
-            <h4>{project.title} - <span>{ project.category? project.category: ""}</span></h4>
+            <h4>{project.title} <span>{ project.category? project.category: ""}</span></h4>
         </div>
         <button className="btn" onClick={this.editToggle} >Edit Project</button>
         <div className="project-details">

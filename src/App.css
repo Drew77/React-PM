@@ -6,6 +6,7 @@
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #252525;
 }
 
 .App {
@@ -83,10 +84,11 @@ h3 {
   font-weight: 400;
   list-style: none;
   margin-bottom: 5px;
+  margin-left: 5px;
 }
 
-.project-details li {
-  margin-left: 5px;
+.project-details li:hover {
+   cursor: pointer;
 }
 
 .project-title,  .edit-project-title {
@@ -109,7 +111,9 @@ h3 {
   padding: 5px;
 }
 
-
+.edit-project-buttons {
+  margin-top: 10px;
+}
 
 .edit-project-buttons button {
   margin-right: 10px;
@@ -207,9 +211,9 @@ h4 span{
 }
 
 textarea {
-  padding: 5px 0px;
+  padding: 20px 0px;
   border: none;
-  height: 100px;
+  min-height: 200px;
   width:100%;
 }
 
@@ -250,6 +254,13 @@ textarea {
   bottom: 5px;
   transform: translateX(-50%);
 }
+
+.btn-green {
+  background: green;
+  color: white;
+}
+
+
 
 .input-container {
   padding: 10px;
@@ -306,4 +317,57 @@ form textarea:focus {
   padding: 10px;
   background: #ADD8E6;
   color: white;
+}
+.project-title h4 span:before {
+  content: "- ";
+}
+
+@media screen and (max-width: 500px) {
+  .project-title, .edit-project-title {
+    height: 80px;
+    line-height: 30px;
+    padding-right: 100px;
+    
+  }
+  
+  .project-container button {
+    width: 100px; 
+    height: 80px;
+  }
+  
+  .project-date {
+    width: auto;
+  }
+  
+
+  .edit-project-title input {
+    width: 90%;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .edit-project-buttons .btn {
+    width: 100%;
+    margin-bottom: 5px;
+    height: auto;
+  }
+  .project-title h4 span {
+    display: block;
+  }
+  
+  .project-title h4 span:before {
+    content: "";
+  }
+  .edit-project-details h4 {
+    margin-top: 40px;
+  }
+  
+  .projects h3 {
+    padding-left: 10px;
+    text-align: left;
+  }
+  
+  .filter {
+    right: 20px;
+  }
 }

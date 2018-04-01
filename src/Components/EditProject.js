@@ -47,8 +47,8 @@ class EditProject extends Component {
         
     <div className="project-container">
         <div className="edit-project-title">
-            <h4><input type="text" defaultValue={project.title} onChange={this.inputChange} name="title"/> - 
-            <span><input type="text" defaultValue={project.category} onChange={this.inputChange} name="category"/></span></h4>
+            <input type="text" defaultValue={project.title} onChange={this.inputChange} name="title"/>
+            <input type="text" defaultValue={project.category} onChange={this.inputChange} name="category"/>
         </div>
         
         <button className="btn" onClick={this.editToggle}>Undo Changes</button>

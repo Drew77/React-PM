@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Projects from './Components/Projects';
 import NewProject from './Components/NewProject';
-import Deadlines from './Components/Deadlines';
-
 
 
 class App extends Component {
@@ -11,7 +9,7 @@ class App extends Component {
   super();
   this.state = {
     filterBy : "All",
-    projectCount: 6,
+    projectCount: 2,
     projects: [
         {
           title: 'Business website',
@@ -25,7 +23,8 @@ class App extends Component {
               ["Color Code Categories", true],
               ["Add new tasks", true],
 
-            ]
+            ],
+            edit: false
         },        {
           title: 'Social App',
           id: 1,
@@ -35,43 +34,7 @@ class App extends Component {
           tasks: [],
           edit: false
         },
-        {
-          title: 'Ecommerce Cats',
-          id: 2,
-          category: "Web Development",
-          date: "June 13, 2018",
-          details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          tasks: [],
-          edit: false
-        },
-        {
-          title: 'Ecommerce Shopping Cart',
-          id: 3,
-          category: "Web Development",
-          date: "March 10, 2018",
-          details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          tasks: [],
-          edit: true
-        },
-        {
-          title: 'Web App',
-          id: 4,
-          category: "Web Development",
-          date: "Sep 10, 2019",
-          details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          tasks: [],
-          edit: false
-        },
-      {
-          title: 'Expired!',
-          id: 5,
-          category: "Web Development",
-          date: "Sep 12, 2017",
-          details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          tasks: [],
-          edit: true
-        },
-      ],
+       ],
       newProjectForm: false,
       
   };
@@ -187,7 +150,6 @@ class App extends Component {
         : <button className="btn" onClick={this.toggleNewForm}>Add New Project</button>}
       
       
-        <Deadlines />
       </div>
     );
   }
